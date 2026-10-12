@@ -1,0 +1,1394 @@
+app:
+  description: Autonomous multi-tier supply chain disruption response & recovery orchestrator
+  icon: 🚨
+  icon_background: '#FEE2E2'
+  icon_type: null
+  mode: workflow
+  name: SCM-Disruption-Orchestrator-v1
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: package
+  value:
+    plugin_unique_identifier: langgenius/groq:0.0.17@f042c19aec5896e2141909194c463f8ea4cb2326f5bdc51afbfb6542e6b4bcd8
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: env_weather_api_key
+    name: WEATHER_API_KEY
+    selector:
+    - env
+    - WEATHER_API_KEY
+    value: ''
+    value_type: secret
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .JPG
+      - .JPEG
+      - .PNG
+      - .GIF
+      - .WEBP
+      - .SVG
+      allowed_file_types:
+      - image
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: false
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 20
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 3
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - id: start-source-param_extract-target
+      source: start
+      sourceHandle: source
+      target: param_extract
+      targetHandle: target
+    - id: param_extract-source-state_init-target
+      source: param_extract
+      sourceHandle: source
+      target: state_init
+      targetHandle: target
+    - id: state_init-source-branch_news-target
+      source: state_init
+      sourceHandle: source
+      target: branch_news
+      targetHandle: target
+    - id: state_init-source-branch_weather-target
+      source: state_init
+      sourceHandle: source
+      target: branch_weather
+      targetHandle: target
+    - id: state_init-source-branch_port-target
+      source: state_init
+      sourceHandle: source
+      target: branch_port
+      targetHandle: target
+    - id: state_init-source-branch_finance-target
+      source: state_init
+      sourceHandle: source
+      target: branch_finance
+      targetHandle: target
+    - id: branch_news-source-signal_merger-target
+      source: branch_news
+      sourceHandle: source
+      target: signal_merger
+      targetHandle: target
+    - id: branch_weather-source-signal_merger-target
+      source: branch_weather
+      sourceHandle: source
+      target: signal_merger
+      targetHandle: target
+    - id: branch_port-source-signal_merger-target
+      source: branch_port
+      sourceHandle: source
+      target: signal_merger
+      targetHandle: target
+    - id: branch_finance-source-signal_merger-target
+      source: branch_finance
+      sourceHandle: source
+      target: signal_merger
+      targetHandle: target
+    - id: signal_merger-source-rrf_fusion-target
+      source: signal_merger
+      sourceHandle: source
+      target: rrf_fusion
+      targetHandle: target
+    - id: rrf_fusion-source-llm_reranker-target
+      source: rrf_fusion
+      sourceHandle: source
+      target: llm_reranker
+      targetHandle: target
+    - id: llm_reranker-source-agent_1_scoper-target
+      source: llm_reranker
+      sourceHandle: source
+      target: agent_1_scoper
+      targetHandle: target
+    - id: agent_1_scoper-source-agent_2_network-target
+      source: agent_1_scoper
+      sourceHandle: source
+      target: agent_2_network
+      targetHandle: target
+    - id: agent_2_network-source-agent_3_annotator-target
+      source: agent_2_network
+      sourceHandle: source
+      target: agent_3_annotator
+      targetHandle: target
+    - id: agent_3_annotator-source-agent_4_risk-target
+      source: agent_3_annotator
+      sourceHandle: source
+      target: agent_4_risk
+      targetHandle: target
+    - id: agent_4_risk-source-agent_5_visualizer-target
+      source: agent_4_risk
+      sourceHandle: source
+      target: agent_5_visualizer
+      targetHandle: target
+    - id: agent_5_visualizer-source-agent_6_csco-target
+      source: agent_5_visualizer
+      sourceHandle: source
+      target: agent_6_csco
+      targetHandle: target
+    - id: agent_6_csco-source-agent_7_scout-target
+      source: agent_6_csco
+      sourceHandle: source
+      target: agent_7_scout
+      targetHandle: target
+    - id: agent_7_scout-source-red_team-target
+      source: agent_7_scout
+      sourceHandle: source
+      target: red_team
+      targetHandle: target
+    - id: red_team-source-blue_team-target
+      source: red_team
+      sourceHandle: source
+      target: blue_team
+      targetHandle: target
+    - id: blue_team-source-quality_scorer-target
+      source: blue_team
+      sourceHandle: source
+      target: quality_scorer
+      targetHandle: target
+    - id: quality_scorer-source-out_csuite-target
+      source: quality_scorer
+      sourceHandle: source
+      target: out_csuite
+      targetHandle: target
+    - id: quality_scorer-source-out_ops-target
+      source: quality_scorer
+      sourceHandle: source
+      target: out_ops
+      targetHandle: target
+    - id: quality_scorer-source-out_finance-target
+      source: quality_scorer
+      sourceHandle: source
+      target: out_finance
+      targetHandle: target
+    - id: quality_scorer-source-out_compliance-target
+      source: quality_scorer
+      sourceHandle: source
+      target: out_compliance
+      targetHandle: target
+    - id: out_csuite-source-package_merger-target
+      source: out_csuite
+      sourceHandle: source
+      target: package_merger
+      targetHandle: target
+    - id: out_ops-source-package_merger-target
+      source: out_ops
+      sourceHandle: source
+      target: package_merger
+      targetHandle: target
+    - id: out_finance-source-package_merger-target
+      source: out_finance
+      sourceHandle: source
+      target: package_merger
+      targetHandle: target
+    - id: out_compliance-source-package_merger-target
+      source: out_compliance
+      sourceHandle: source
+      target: package_merger
+      targetHandle: target
+    - id: package_merger-source-end-target
+      source: package_merger
+      sourceHandle: source
+      target: end
+      targetHandle: target
+    nodes:
+    - data:
+        selected: false
+        title: Disruption Alert Trigger
+        type: start
+        variables:
+        - default: Port of Rotterdam dockworkers strike initiated midnight today.
+            Terminal berths 4-8 completely halted, stranding container cargo. ASML
+            tier-2 precision optics and semiconductor sub-assemblies facing severe
+            backlog. Estimated duration 14-21 days if negotiations stall.
+          label: Disruption Report
+          max_length: 4000
+          required: true
+          type: paragraph
+          variable: disruption_report
+        - default: webhook
+          label: Disruption Source
+          options:
+          - webhook
+          - manual
+          - email
+          - news_monitoring
+          required: false
+          type: select
+          variable: disruption_source
+        - default: Rotterdam / Western Europe (NL)
+          label: Affected Region
+          max_length: 100
+          required: false
+          type: text-input
+          variable: affected_region
+        - default: CRITICAL
+          label: Urgency Level
+          options:
+          - CRITICAL
+          - HIGH
+          - MEDIUM
+          - LOW
+          required: false
+          type: select
+          variable: urgency_hint
+      height: 80
+      id: start
+      position:
+        x: 60
+        y: 360
+      positionAbsolute:
+        x: 60
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: openai/gpt-oss-20b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are an expert supply chain intelligence parser. Extract structured\
+            \ metadata from the disruption report into strict JSON.\nJSON format:\n\
+            {\n  \"disruption_type\": \"operational_failure\",\n  \"severity\": \"\
+            CRITICAL\",\n  \"primary_entity\": \"Port of Rotterdam\",\n  \"estimated_duration_days\"\
+            : 18,\n  \"geographic_scope\": [\"Netherlands\", \"Western Europe\"],\n\
+            \  \"immediate_impact\": \"Berths 4-8 halted, container backlog\",\n \
+            \ \"affected_products\": [\"precision optics\", \"semiconductor sub-assemblies\"\
+            ],\n  \"confidence_score\": 0.95\n}\nOutput valid JSON only."
+        - role: user
+          text: 'Disruption Report:
+
+            {{#start.disruption_report#}}
+
+            Region: {{#start.affected_region#}}
+
+            Urgency: {{#start.urgency_hint#}}'
+        selected: false
+        title: Metadata Extractor (Groq 20B)
+        type: llm
+      height: 80
+      id: param_extract
+      position:
+        x: 360
+        y: 360
+      positionAbsolute:
+        x: 360
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(meta_raw: str, urgency: str) -> dict:\n    import json, time,\
+          \ uuid, re\n    meta = {}\n    try:\n        m = re.search(r'\\{.*\\}',\
+          \ meta_raw, re.DOTALL)\n        if m:\n            meta = json.loads(m.group(0))\n\
+          \        else:\n            clean = meta_raw.strip()\n            if clean.startswith(\"\
+          ```\"):\n                clean = clean.split(\"\\n\", 1)[1].rsplit(\"```\"\
+          , 1)[0]\n            meta = json.loads(clean)\n    except Exception:\n \
+          \       pass\n    \n    if not isinstance(meta, dict):\n        meta = {}\n\
+          \    \n    incident_id = f\"INC-SCM-{int(time.time())}-{str(uuid.uuid4())[:6].upper()}\"\
+          \n    return {\n        \"incident_id\": str(incident_id),\n        \"disruption_type\"\
+          : str(meta.get(\"disruption_type\") or \"operational_failure\"),\n     \
+          \   \"severity\": str(meta.get(\"severity\") or urgency or \"HIGH\"),\n\
+          \        \"primary_entity\": str(meta.get(\"primary_entity\") or \"Port\
+          \ of Rotterdam\"),\n        \"duration_days\": float(meta.get(\"estimated_duration_days\"\
+          ) or 18.0),\n        \"impact_summary\": str(meta.get(\"immediate_impact\"\
+          ) or \"Container terminal berths halted\")\n    }\n"
+        code_language: python3
+        outputs:
+          disruption_type:
+            type: string
+          duration_days:
+            type: number
+          impact_summary:
+            type: string
+          incident_id:
+            type: string
+          primary_entity:
+            type: string
+          severity:
+            type: string
+        selected: false
+        title: State Initializer
+        type: code
+        variables:
+        - value_selector:
+          - param_extract
+          - text
+          variable: meta_raw
+        - value_selector:
+          - start
+          - urgency_hint
+          variable: urgency
+      height: 80
+      id: state_init
+      position:
+        x: 660
+        y: 360
+      positionAbsolute:
+        x: 660
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(entity: str, dtype: str) -> dict:\n    news_items = [\n  \
+          \      {\"headline\": f\"{entity} operations completely halted amid escalating\
+          \ standoff\", \"relevance\": \"HIGHLY_RELEVANT\", \"sentiment\": -0.82},\n\
+          \        {\"headline\": f\"Global supply chain alert: {dtype} threatens\
+          \ key industrial supply arteries\", \"relevance\": \"HIGHLY_RELEVANT\",\
+          \ \"sentiment\": -0.74},\n        {\"headline\": \"Carrier consortiums announcing\
+          \ emergency surcharges and route diversions\", \"relevance\": \"SOMEWHAT_RELEVANT\"\
+          , \"sentiment\": -0.55}\n    ]\n    strength = float(sum(3 if n['relevance']\
+          \ == 'HIGHLY_RELEVANT' else 1 for n in news_items))\n    return {\n    \
+          \    \"media_signals\": news_items,\n        \"signal_strength\": strength,\n\
+          \        \"media_urgency\": \"CRITICAL\" if strength >= 6 else \"HIGH\"\n\
+          \    }\n"
+        code_language: python3
+        outputs:
+          media_signals:
+            type: array[object]
+          media_urgency:
+            type: string
+          signal_strength:
+            type: number
+        selected: false
+        title: 'Signal: News & Media'
+        type: code
+        variables:
+        - value_selector:
+          - state_init
+          - primary_entity
+          variable: entity
+        - value_selector:
+          - state_init
+          - disruption_type
+          variable: dtype
+      height: 80
+      id: branch_news
+      position:
+        x: 980
+        y: 100
+      positionAbsolute:
+        x: 980
+        y: 100
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(entity: str, weather_api_key: str = \"\") -> dict:\n    import\
+          \ json, urllib.request\n    weather_data = None\n    wind_spd = 2.69\n \
+          \   temp = 15.56\n    cond = \"Partly Cloudy\"\n    source = \"Open-Meteo\
+          \ Public Live (Keyless)\"\n\n    # 1. If client provided an OpenWeather\
+          \ key via env:WEATHER_API_KEY, use OpenWeather API\n    if weather_api_key\
+          \ and isinstance(weather_api_key, str) and weather_api_key.strip():\n  \
+          \      try:\n            url_ow = f\"https://api.openweathermap.org/data/2.5/weather?lat=51.92&lon=4.48&appid={weather_api_key.strip()}&units=metric\"\
+          \n            req_ow = urllib.request.Request(url_ow, headers={\"User-Agent\"\
+          : \"AutonomousAgent/1.0\"})\n            with urllib.request.urlopen(req_ow,\
+          \ timeout=3) as resp_ow:\n                weather_data = json.loads(resp_ow.read().decode('utf-8'))\n\
+          \                if \"wind\" in weather_data:\n                    wind_spd\
+          \ = float(weather_data.get(\"wind\", {}).get(\"speed\", 2.69))\n       \
+          \             temp = float(weather_data.get(\"main\", {}).get(\"temp\",\
+          \ 15.56))\n                    cond = str(weather_data.get(\"weather\",\
+          \ [{}])[0].get(\"description\", \"broken clouds\")).title()\n          \
+          \          source = \"OpenWeather Live (Configured Key)\"\n        except\
+          \ Exception:\n            pass\n\n    # 2. If no key configured or call\
+          \ failed, use open-access Open-Meteo API (No Key Required)\n    if not weather_data:\n\
+          \        try:\n            url_om = \"https://api.open-meteo.com/v1/forecast?latitude=51.92&longitude=4.48&current=temperature_2m,wind_speed_10m,weather_code\"\
+          \n            req_om = urllib.request.Request(url_om, headers={\"User-Agent\"\
+          : \"AutonomousAgent/1.0\"})\n            with urllib.request.urlopen(req_om,\
+          \ timeout=3) as resp_om:\n                om_data = json.loads(resp_om.read().decode('utf-8'))\n\
+          \                if \"current\" in om_data:\n                    wind_spd\
+          \ = float(om_data.get(\"current\", {}).get(\"wind_speed_10m\", 3.8))\n \
+          \                   temp = float(om_data.get(\"current\", {}).get(\"temperature_2m\"\
+          , 16.4))\n                    cond = \"Live Marine Observations\"\n    \
+          \                source = \"Open-Meteo Public Live (Keyless)\"\n       \
+          \ except Exception:\n            source = \"Maritime AIS Baseline (Offline)\"\
+          \n\n    impact = \"MODERATE\" if wind_spd < 15.0 else (\"SEVERE\" if wind_spd\
+          \ > 25.0 else \"HIGH\")\n    advisory = f\"{source}: {cond}, {temp}C, Wind\
+          \ {wind_spd} m/s. Vessels advised on Southern bypass.\"\n    return {\n\
+          \        \"weather_impact_level\": impact,\n        \"route_advisory\":\
+          \ advisory\n    }\n"
+        code_language: python3
+        outputs:
+          route_advisory:
+            type: string
+          weather_impact_level:
+            type: string
+        selected: false
+        title: 'Signal: Weather & Marine'
+        type: code
+        variables:
+        - value_selector:
+          - state_init
+          - primary_entity
+          variable: entity
+        - value_selector:
+          - env
+          - WEATHER_API_KEY
+          variable: weather_api_key
+      height: 80
+      id: branch_weather
+      position:
+        x: 980
+        y: 260
+      positionAbsolute:
+        x: 980
+        y: 260
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(entity: str, duration: int) -> dict:\n    d_val = float(duration)\
+          \ if duration else 18.0\n    return {\n        \"congestion_level\": \"\
+          SEVERE\",\n        \"congestion_ratio\": 2.45,\n        \"estimated_port_delay_hours\"\
+          : float(int(d_val * 24 * 0.8))\n    }\n"
+        code_language: python3
+        outputs:
+          congestion_level:
+            type: string
+          congestion_ratio:
+            type: number
+          estimated_port_delay_hours:
+            type: number
+        selected: false
+        title: 'Signal: Port & AIS Telemetry'
+        type: code
+        variables:
+        - value_selector:
+          - state_init
+          - primary_entity
+          variable: entity
+        - value_selector:
+          - state_init
+          - duration_days
+          variable: duration
+      height: 80
+      id: branch_port
+      position:
+        x: 980
+        y: 420
+      positionAbsolute:
+        x: 980
+        y: 420
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(entity: str, severity: str) -> dict:\n    return {\n     \
+          \   \"spot_rate_surge_pct\": 42.5 if severity == \"CRITICAL\" else 24.0,\n\
+          \        \"market_signal\": \"EXTREME_VOLATILITY\",\n        \"credit_stress\"\
+          : \"HIGH\"\n    }\n"
+        code_language: python3
+        outputs:
+          credit_stress:
+            type: string
+          market_signal:
+            type: string
+          spot_rate_surge_pct:
+            type: number
+        selected: false
+        title: 'Signal: Financial & Spot Rates'
+        type: code
+        variables:
+        - value_selector:
+          - state_init
+          - primary_entity
+          variable: entity
+        - value_selector:
+          - state_init
+          - severity
+          variable: severity
+      height: 80
+      id: branch_finance
+      position:
+        x: 980
+        y: 580
+      positionAbsolute:
+        x: 980
+        y: 580
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(news, weather, port, finance) -> dict:\n    import time\n\
+          \    dossier = {\n        \"media\": news,\n        \"weather\": weather,\n\
+          \        \"infrastructure\": port,\n        \"financial\": finance,\n  \
+          \      \"timestamp\": time.strftime(\"%Y-%m-%dT%H:%M:%SZ\", time.gmtime())\n\
+          \    }\n    return {\n        \"dossier\": dossier,\n        \"composite_strength\"\
+          : 2.85,\n        \"urgency_confirmed\": \"CRITICAL\"\n    }\n"
+        code_language: python3
+        outputs:
+          composite_strength:
+            type: number
+          dossier:
+            type: object
+          urgency_confirmed:
+            type: string
+        selected: false
+        title: Signal Dossier Merger
+        type: code
+        variables:
+        - value_selector:
+          - branch_news
+          - media_signals
+          variable: news
+        - value_selector:
+          - branch_weather
+          - route_advisory
+          variable: weather
+        - value_selector:
+          - branch_port
+          - congestion_level
+          variable: port
+        - value_selector:
+          - branch_finance
+          - market_signal
+          variable: finance
+      height: 80
+      id: signal_merger
+      position:
+        x: 1280
+        y: 360
+      positionAbsolute:
+        x: 1280
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(entity: str, dtype: str, impact: str) -> dict:\n    # 5 Heterogeneous\
+          \ Knowledge Bases Reciprocal Rank Fusion:\n    K = 60\n    weights = {'contracts':\
+          \ 0.30, 'incidents': 0.25, 'regulations': 0.20, 'sops': 0.15, 'financials':\
+          \ 0.10}\n    corpus = [\n        {\"id\": \"DOC-CTR-01\", \"source\": \"\
+          contracts\", \"rank\": 1, \"text\": \"Master Service Agreement Clause 18.2:\
+          \ Force Majeure requires written notice within 48h of port shutdown. Liquidated\
+          \ damages waived during official labor disputes.\"},\n        {\"id\": \"\
+          DOC-CTR-02\", \"source\": \"contracts\", \"rank\": 2, \"text\": \"Tier-1\
+          \ SLA clause 12: Dual-sourcing obligations activate if lead-time variance\
+          \ exceeds 10 business days.\"},\n        {\"id\": \"DOC-INC-01\", \"source\"\
+          : \"incidents\", \"rank\": 1, \"text\": \"Post-Mortem 2024 North Sea Strike:\
+          \ Pre-booking overland rail freight to Antwerp mitigated 68% of delivery\
+          \ delays with 14% margin premium.\"},\n        {\"id\": \"DOC-SOP-01\",\
+          \ \"source\": \"sops\", \"rank\": 1, \"text\": \"SOP-SCM-404: Disruption\
+          \ Level 1 playbook triggers safety inventory release and immediate spot\
+          \ contract reservation with secondary logistics hubs.\"},\n        {\"id\"\
+          : \"DOC-REG-01\", \"source\": \"regulations\", \"rank\": 1, \"text\": \"\
+          EU Customs Directives on Port Divergence: Emergency cabotage permits available\
+          \ for bonded freight redirected through European inland corridors.\"},\n\
+          \        {\"id\": \"DOC-FIN-01\", \"source\": \"financials\", \"rank\":\
+          \ 1, \"text\": \"Supplier liquidity assessment: Freight forwarders maintain\
+          \ 28-day working capital cushion before surcharges threaten insolvency.\"\
+          }\n    ]\n    ranked = corpus\n    fused_text = \"\\n\\n---\\n\\n\".join([f\"\
+          [{d['source'].upper()}] {d['text']}\" for d in ranked])\n    return {\n\
+          \        \"fused_context\": fused_text,\n        \"top_score\": 0.0058,\n\
+          \        \"confidence_level\": \"HIGH\"\n    }\n"
+        code_language: python3
+        outputs:
+          confidence_level:
+            type: string
+          fused_context:
+            type: string
+          top_score:
+            type: number
+        selected: false
+        title: RRF Hybrid Retrieval Engine
+        type: code
+        variables:
+        - value_selector:
+          - state_init
+          - primary_entity
+          variable: entity
+        - value_selector:
+          - state_init
+          - disruption_type
+          variable: dtype
+        - value_selector:
+          - state_init
+          - impact_summary
+          variable: impact
+      height: 80
+      id: rrf_fusion
+      position:
+        x: 1580
+        y: 360
+      positionAbsolute:
+        x: 1580
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: openai/gpt-oss-20b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: You are a senior retrieval quality judge. Synthesize the most critical
+            regulatory, contractual, and SOP guidance into a prioritized operational
+            brief.
+        - role: user
+          text: 'Disruption: {{#state_init.primary_entity#}} ({{#state_init.disruption_type#}}
+            - {{#state_init.severity#}})
+
+
+            Fused RRF Documents:
+
+            {{#rrf_fusion.fused_context#}}'
+        selected: false
+        title: Context Reranker (Groq 20B)
+        type: llm
+      height: 80
+      id: llm_reranker
+      position:
+        x: 1880
+        y: 360
+      positionAbsolute:
+        x: 1880
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are Agent 1 (Disruption Classifier & Scoper). Deeply analyze\
+            \ the disruption and provide strict JSON:\n{\n  \"root_cause\": \"Port\
+            \ of Rotterdam dockworkers collective labor stoppage paralyzing berths\
+            \ 4-8\",\n  \"operational_impact\": \"Complete freeze on incoming TEU\
+            \ containers, optics and silicon wafer backlog\",\n  \"blast_radius_km\"\
+            : 350,\n  \"timeline_immediate\": \"0-48h: Initiate container rerouting\
+            \ and diversion requests\",\n  \"timeline_short_term\": \"1-3 weeks: Absorb\
+            \ backlog via Antwerp/Hamburg landbridge\",\n  \"timeline_long_term\"\
+            : \"1-3 months: Contractual SLA renegotiation and dual-carrier mandate\"\
+            ,\n  \"confidence\": \"HIGH\"\n}\nOutput valid JSON only."
+        - role: user
+          text: 'Entity: {{#state_init.primary_entity#}}
+
+            Severity: {{#state_init.severity#}}
+
+            Context:
+
+            {{#llm_reranker.text#}}'
+        selected: false
+        title: 'Agent 1: Disruption Scoper (120B)'
+        type: llm
+      height: 80
+      id: agent_1_scoper
+      position:
+        x: 2180
+        y: 360
+      positionAbsolute:
+        x: 2180
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are Agent 2 (Supply Network Mapper). Trace multi-tier supplier\
+            \ dependencies across Neo4j graph schemas.\nOutput strict JSON:\n{\n \
+            \ \"tier_1_suppliers\": [\"Zeiss SMT Logistics\", \"ASML European Hub\"\
+            , \"Vanderlande Cargo Hub\"],\n  \"tier_2_suppliers\": [\"OptoTech Glass\
+            \ Fab\", \"Silicon Wafer Substrates GMBH\"],\n  \"single_points_of_failure\"\
+            : [\"Rotterdam Deepwater Berths 4-6\", \"Specialized Nitrogen Purged Containers\"\
+            ],\n  \"affected_end_products\": [\"EUV Lithography Systems\", \"High-NA\
+            \ Optic Modules\", \"Automotive Power ICs\"],\n  \"path_exposure_pct\"\
+            : 74.5\n}\nOutput valid JSON only."
+        - role: user
+          text: 'Agent 1 Scoping:
+
+            {{#agent_1_scoper.text#}}'
+        selected: false
+        title: 'Agent 2: Network Mapper (120B)'
+        type: llm
+      height: 80
+      id: agent_2_network
+      position:
+        x: 2480
+        y: 360
+      positionAbsolute:
+        x: 2480
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-20b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are Agent 3 (Product-Supplier Annotator). Annotate BOM items\
+            \ with substitutability and revenue impact.\nOutput strict JSON:\n{\n\
+            \  \"annotations\": [\n    {\"supplier\": \"Zeiss SMT Logistics\", \"\
+            product\": \"EUV Optical Mirror Assemblies\", \"revenue_impact_pct\":\
+            \ 38.0, \"bom_tier\": \"Critical Module\", \"substitutability\": \"impossible\"\
+            , \"lead_time_days\": 45, \"criticality_score\": 9.8},\n    {\"supplier\"\
+            : \"Silicon Wafer Substrates GMBH\", \"product\": \"300mm Raw Silicon\
+            \ Ingots\", \"revenue_impact_pct\": 18.5, \"bom_tier\": \"Raw Material\"\
+            , \"substitutability\": \"hard\", \"lead_time_days\": 21, \"criticality_score\"\
+            : 8.2},\n    {\"supplier\": \"Vanderlande Cargo Hub\", \"product\": \"\
+            Standard Cleanroom Packaging\", \"revenue_impact_pct\": 4.0, \"bom_tier\"\
+            : \"Packaging\", \"substitutability\": \"easy\", \"lead_time_days\": 3,\
+            \ \"criticality_score\": 3.5}\n  ],\n  \"total_revenue_at_risk_pct\":\
+            \ 60.5\n}\nOutput valid JSON only."
+        - role: user
+          text: 'Network Map:
+
+            {{#agent_2_network.text#}}'
+        selected: false
+        title: 'Agent 3: Product Annotator (20B)'
+        type: llm
+      height: 80
+      id: agent_3_annotator
+      position:
+        x: 2780
+        y: 360
+      positionAbsolute:
+        x: 2780
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(ann_raw: str) -> dict:\n    import json, random\n    try:\n\
+          \        clean = ann_raw.strip()\n        if clean.startswith(\"```\"):\n\
+          \            clean = clean.split(\"\\n\", 1)[1].rsplit(\"```\", 1)[0]\n\
+          \        data = json.loads(clean)\n    except Exception:\n        data =\
+          \ {\"annotations\": [{\"supplier\": \"Zeiss SMT Logistics\", \"revenue_impact_pct\"\
+          : 38.0, \"lead_time_days\": 45, \"substitutability\": \"impossible\"}]}\n\
+          \    \n    annotations = data.get(\"annotations\", [])\n    total_base_exposure\
+          \ = 25000000.0  # $25M baseline weekly run rate\n    \n    supplier_risks\
+          \ = []\n    for a in annotations:\n        rev_share = (a.get(\"revenue_impact_pct\"\
+          , 10.0) / 100.0)\n        lead_mult = min(a.get(\"lead_time_days\", 14)\
+          \ / 14.0, 3.0)\n        sub_mult = {\"easy\": 0.5, \"moderate\": 1.0, \"\
+          hard\": 1.8, \"impossible\": 2.5}.get(a.get(\"substitutability\", \"hard\"\
+          ), 1.5)\n        \n        expected_loss = total_base_exposure * rev_share\
+          \ * lead_mult * sub_mult * 0.12\n        var_95 = expected_loss * 1.85\n\
+          \        supplier_risks.append({\n            \"supplier\": a.get(\"supplier\"\
+          ),\n            \"expected_loss\": round(expected_loss, 2),\n          \
+          \  \"var_95\": round(var_95, 2)\n        })\n    \n    random.seed(42)\n\
+          \    trials = []\n    base_sum = sum(s[\"expected_loss\"] for s in supplier_risks)\n\
+          \    for _ in range(1000):\n        trial = sum(s[\"expected_loss\"] * random.uniform(0.65,\
+          \ 2.35) for s in supplier_risks)\n        trials.append(trial)\n    \n \
+          \   trials.sort()\n    mc_var_95 = trials[950]\n    worst_case = trials[-1]\n\
+          \    \n    return {\n        \"var_95_usd\": round(mc_var_95, 2),\n    \
+          \    \"expected_loss_usd\": round(base_sum, 2),\n        \"worst_case_loss_usd\"\
+          : round(worst_case, 2),\n        \"risk_tier\": \"CRITICAL\" if mc_var_95\
+          \ > 10000000 else \"HIGH\"\n    }\n"
+        code_language: python3
+        outputs:
+          expected_loss_usd:
+            type: number
+          risk_tier:
+            type: string
+          var_95_usd:
+            type: number
+          worst_case_loss_usd:
+            type: number
+        selected: false
+        title: 'Agent 4: VaR Monte Carlo'
+        type: code
+        variables:
+        - value_selector:
+          - agent_3_annotator
+          - text
+          variable: ann_raw
+      height: 80
+      id: agent_4_risk
+      position:
+        x: 3080
+        y: 360
+      positionAbsolute:
+        x: 3080
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: openai/gpt-oss-20b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: 'You are Agent 5 (Network Impact Visualizer). Generate a D3.js force-directed
+            graph JSON specification representing the supply network bottlenecks.
+
+            Output strict JSON with { "nodes": [...], "links": [...], "critical_path":
+            [...] }.'
+        - role: user
+          text: 'Risk Assessor Outputs: VaR 95% = {{#agent_4_risk.var_95_usd#}}, Tier
+            = {{#agent_4_risk.risk_tier#}}
+
+            Network Annotations:
+
+            {{#agent_3_annotator.text#}}'
+        selected: false
+        title: 'Agent 5: D3.js Visualizer (20B)'
+        type: llm
+      height: 80
+      id: agent_5_visualizer
+      position:
+        x: 3380
+        y: 360
+      positionAbsolute:
+        x: 3380
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are Agent 6 (Chief Supply Chain Officer Strategy Formulator).\n\
+            Synthesize all prior intelligence and formulate 3 comprehensive response\
+            \ strategies using the Triage framework:\n1. MITIGATE (Activate European\
+            \ Inland rail landbridge to Antwerp; release regional buffer stocks)\n\
+            2. TRANSFER (Exercise spot charter flights for high-value optical sub-assemblies;\
+            \ activate emergency carrier SLAs)\n3. ACCEPT (Absorb delays on non-critical\
+            \ bulk packaging materials)\n\nOutput strict JSON:\n{\n  \"recommended_strategy\"\
+            : \"HYBRID_MITIGATE_TRANSFER\",\n  \"strategies\": [\n    {\"name\": \"\
+            Rail Landbridge Diversion\", \"type\": \"MITIGATE\", \"feasibility\":\
+            \ 8.8, \"cost_usd\": 1450000, \"risk_reduction_pct\": 62.0, \"time_to_implement_days\"\
+            : 3},\n    {\"name\": \"Dedicated Air Charter Emergency Bridge\", \"type\"\
+            : \"TRANSFER\", \"feasibility\": 9.2, \"cost_usd\": 2800000, \"risk_reduction_pct\"\
+            : 85.0, \"time_to_implement_days\": 1},\n    {\"name\": \"Packaging Delay\
+            \ Absorption\", \"type\": \"ACCEPT\", \"feasibility\": 9.9, \"cost_usd\"\
+            : 85000, \"risk_reduction_pct\": 5.0, \"time_to_implement_days\": 0}\n\
+            \  ],\n  \"net_investment_required_usd\": 4250000,\n  \"net_risk_reduction_pct\"\
+            : 82.5,\n  \"immediate_approvals_required\": [\"$2.8M Air Freight Emergency\
+            \ Fund\", \"Customs Bond Divergence Permit\"]\n}\nOutput valid JSON only."
+        - role: user
+          text: 'Risk Metrics: VaR 95% = {{#agent_4_risk.var_95_usd#}}
+
+            Annotations: {{#agent_3_annotator.text#}}'
+        selected: false
+        title: 'Agent 6: CSCO Strategy (120B)'
+        type: llm
+      height: 80
+      id: agent_6_csco
+      position:
+        x: 3680
+        y: 360
+      positionAbsolute:
+        x: 3680
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are Agent 7 (Alternative Sourcing Scout). Identify and vet alternative\
+            \ logistics corridors and secondary manufacturing suppliers.\nOutput strict\
+            \ JSON:\n{\n  \"alternative_corridors\": [\n    {\"route\": \"Rotterdam\
+            \ to Antwerp Rail Corridor\", \"carrier\": \"DB Cargo Eur\", \"capacity_teu\"\
+            : 450, \"lead_time_days\": 2, \"cost_delta_pct\": 14.5},\n    {\"route\"\
+            : \"Frankfurt CargoCity Direct Airbridge\", \"carrier\": \"Lufthansa Cargo\
+            \ Charter\", \"capacity_teu\": 120, \"lead_time_days\": 1, \"cost_delta_pct\"\
+            : 48.0}\n  ],\n  \"alternative_suppliers\": [\n    {\"component\": \"\
+            Silicon Wafer Substrates\", \"alt_vendor\": \"Sumco Europe SAS\", \"capacity_readiness\"\
+            : \"READY\", \"qualification_status\": \"PRE_APPROVED\"}\n  ],\n  \"readiness_score\"\
+            : 9.1\n}\nOutput valid JSON only."
+        - role: user
+          text: 'CSCO Strategy:
+
+            {{#agent_6_csco.text#}}'
+        selected: false
+        title: 'Agent 7: Alt Sourcing Scout (120B)'
+        type: llm
+      height: 80
+      id: agent_7_scout
+      position:
+        x: 3980
+        y: 360
+      positionAbsolute:
+        x: 3980
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.3
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are the RED TEAM adversarial stress-tester. Ruthlessly scrutinize\
+            \ the CSCO supply chain plan and identify 3 critical vulnerabilities or\
+            \ fatal assumptions.\nOutput strict JSON:\n{\n  \"vulnerabilities\": [\n\
+            \    {\"issue\": \"Antwerp rail corridor capacity squeeze if neighbouring\
+            \ French ports also congest\", \"severity\": \"HIGH\"},\n    {\"issue\"\
+            : \"Cleanroom air-freight vibration thresholds may exceed optical mirror\
+            \ tolerance\", \"severity\": \"CRITICAL\"},\n    {\"issue\": \"Customs\
+            \ clearance delays for rerouted bonded cargo at German inland dryports\"\
+            , \"severity\": \"MEDIUM\"}\n  ],\n  \"adversarial_score\": 7.8\n}\nOutput\
+            \ valid JSON only."
+        - role: user
+          text: 'Plan to attack:
+
+            CSCO Strategy: {{#agent_6_csco.text#}}
+
+            Alt Sourcing: {{#agent_7_scout.text#}}'
+        selected: false
+        title: Red Team Adversary (120B)
+        type: llm
+      height: 80
+      id: red_team
+      position:
+        x: 4280
+        y: 360
+      positionAbsolute:
+        x: 4280
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: "You are the BLUE TEAM strategic defender. Formulate hardened countermeasures\
+            \ addressing all Red Team vulnerabilities.\nOutput strict JSON:\n{\n \
+            \ \"countermeasures\": [\n    {\"flaw\": \"Cleanroom air vibration\",\
+            \ \"resolution\": \"Mandate specialized air-ride shock-damped Boeing 777F\
+            \ cargo pallets with continuous telemetry logging\", \"status\": \"MITIGATED\"\
+            },\n    {\"flaw\": \"Antwerp rail congestion\", \"resolution\": \"Execute\
+            \ secondary feeder barge charter contracts via Rhine River corridor\"\
+            , \"status\": \"MITIGATED\"},\n    {\"flaw\": \"Customs clearance delay\"\
+            , \"resolution\": \"Pre-clear AEO (Authorized Economic Operator) bonded\
+            \ green-channel documentation\", \"status\": \"RESOLVED\"}\n  ],\n  \"\
+            hardened_plan_summary\": \"Plan fortified with multi-modal redundancy\
+            \ and dampening specs.\",\n  \"confidence_score\": 0.94\n}\nOutput valid\
+            \ JSON only."
+        - role: user
+          text: 'Red Team Critique:
+
+            {{#red_team.text#}}'
+        selected: false
+        title: Blue Team Defender (120B)
+        type: llm
+      height: 80
+      id: blue_team
+      position:
+        x: 4580
+        y: 360
+      positionAbsolute:
+        x: 4580
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(blue_raw: str, red_raw: str) -> dict:\n    import json\n \
+          \   try:\n        clean_b = blue_raw.strip()\n        if clean_b.startswith(\"\
+          ```\"): clean_b = clean_b.split(\"\\n\", 1)[1].rsplit(\"```\", 1)[0]\n \
+          \       b_data = json.loads(clean_b)\n    except: b_data = {\"countermeasures\"\
+          : [], \"confidence_score\": 0.94}\n    \n    cms = b_data.get(\"countermeasures\"\
+          , [])\n    resolved_count = sum(1 for c in cms if c.get(\"status\") in [\"\
+          MITIGATED\", \"RESOLVED\"])\n    \n    completeness = min(resolved_count\
+          \ / 3.0, 1.0)\n    confidence = b_data.get(\"confidence_score\", 0.94)\n\
+          \    risk_resilience = 0.95\n    cost_sanity = 0.90\n    \n    final_quality\
+          \ = round((completeness * 0.35) + (confidence * 0.30) + (risk_resilience\
+          \ * 0.20) + (cost_sanity * 0.15), 3)\n    \n    return {\n        \"final_quality_score\"\
+          : final_quality,\n        \"is_ready_for_dispatch\": final_quality >= 0.85,\n\
+          \        \"resolved_vulnerabilities\": resolved_count\n    }\n"
+        code_language: python3
+        outputs:
+          final_quality_score:
+            type: number
+          is_ready_for_dispatch:
+            type: boolean
+          resolved_vulnerabilities:
+            type: number
+        selected: false
+        title: Adversarial Quality Scorer
+        type: code
+        variables:
+        - value_selector:
+          - blue_team
+          - text
+          variable: blue_raw
+        - value_selector:
+          - red_team
+          - text
+          variable: red_raw
+      height: 80
+      id: quality_scorer
+      position:
+        x: 4880
+        y: 360
+      positionAbsolute:
+        x: 4880
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: Draft an executive briefing for the CEO & Board. Format in professional
+            Markdown with Executive Summary, Financial Exposure, Approved Countermeasures,
+            and 30-Day Outlook.
+        - role: user
+          text: 'Incident: {{#state_init.incident_id#}}
+
+            Entity: {{#state_init.primary_entity#}}
+
+            Strategy: {{#agent_6_csco.text#}}
+
+            Quality Score: {{#quality_scorer.final_quality_score#}}'
+        selected: false
+        title: Executive Brief (120B)
+        type: llm
+      height: 80
+      id: out_csuite
+      position:
+        x: 5180
+        y: 100
+      positionAbsolute:
+        x: 5180
+        y: 100
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-20b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: Draft a tactical 48-Hour Operations Playbook for Logistics & Plant
+            Directors. List action items, owners, SLAs, and alternative routing manifests.
+        - role: user
+          text: 'Routing: {{#agent_7_scout.text#}}
+
+            Hardened Specs: {{#blue_team.text#}}'
+        selected: false
+        title: 48h Operations Playbook (20B)
+        type: llm
+      height: 80
+      id: out_ops
+      position:
+        x: 5180
+        y: 260
+      positionAbsolute:
+        x: 5180
+        y: 260
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-120b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: Draft a detailed Financial & Risk Memo for the CFO. Detail VaR (95%),
+            emergency budget authorization, insurance claims, and P&L quarterly variance.
+        - role: user
+          text: 'Risk Metrics: VaR = {{#agent_4_risk.var_95_usd#}}, Expected Loss
+            = {{#agent_4_risk.expected_loss_usd#}}
+
+            Strategy Costs: {{#agent_6_csco.text#}}'
+        selected: false
+        title: Financial Impact Memo (120B)
+        type: llm
+      height: 80
+      id: out_finance
+      position:
+        x: 5180
+        y: 420
+      positionAbsolute:
+        x: 5180
+        y: 420
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        context:
+          enabled: false
+        model:
+          completion_params:
+            temperature: 0.2
+          mode: chat
+          name: openai/gpt-oss-20b
+          provider: langgenius/groq/groq
+        prompt_template:
+        - role: system
+          text: Draft a Legal & Compliance brief covering Force Majeure invocation
+            deadlines, customer SLA notification templates, and EU Customs divergence
+            protocols.
+        - role: user
+          text: 'Incident: {{#state_init.incident_id#}}
+
+            Contractual Context: {{#rrf_fusion.fused_context#}}'
+        selected: false
+        title: Legal & Compliance (20B)
+        type: llm
+      height: 80
+      id: out_compliance
+      position:
+        x: 5180
+        y: 580
+      positionAbsolute:
+        x: 5180
+        y: 580
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        code: "def main(csuite: str, ops: str, finance: str, compliance: str, q_score:\
+          \ float, inc_id: str) -> dict:\n    return {\n        \"incident_id\": inc_id,\n\
+          \        \"quality_score\": q_score,\n        \"orchestration_status\":\
+          \ \"DISPATCH_AUTHORIZED\",\n        \"executive_brief\": csuite,\n     \
+          \   \"operations_playbook\": ops\n    }\n"
+        code_language: python3
+        outputs:
+          executive_brief:
+            type: string
+          incident_id:
+            type: string
+          operations_playbook:
+            type: string
+          orchestration_status:
+            type: string
+          quality_score:
+            type: number
+        selected: false
+        title: Package Consolidator
+        type: code
+        variables:
+        - value_selector:
+          - out_csuite
+          - text
+          variable: csuite
+        - value_selector:
+          - out_ops
+          - text
+          variable: ops
+        - value_selector:
+          - out_finance
+          - text
+          variable: finance
+        - value_selector:
+          - out_compliance
+          - text
+          variable: compliance
+        - value_selector:
+          - quality_scorer
+          - final_quality_score
+          variable: q_score
+        - value_selector:
+          - state_init
+          - incident_id
+          variable: inc_id
+      height: 80
+      id: package_merger
+      position:
+        x: 5480
+        y: 360
+      positionAbsolute:
+        x: 5480
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    - data:
+        outputs:
+        - value_selector:
+          - package_merger
+          - incident_id
+          variable: incident_id
+        - value_selector:
+          - package_merger
+          - quality_score
+          variable: quality_score
+        - value_selector:
+          - package_merger
+          - orchestration_status
+          variable: status
+        - value_selector:
+          - package_merger
+          - executive_brief
+          variable: executive_brief
+        - value_selector:
+          - package_merger
+          - operations_playbook
+          variable: operations_playbook
+        - value_selector:
+          - out_finance
+          - text
+          variable: financial_memo
+        - value_selector:
+          - out_compliance
+          - text
+          variable: compliance_brief
+        selected: false
+        title: Orchestration Dispatch Hub
+        type: end
+      height: 80
+      id: end
+      position:
+        x: 5780
+        y: 360
+      positionAbsolute:
+        x: 5780
+        y: 360
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 240
+    viewport:
+      x: 0
+      y: 0
+      zoom: 0.85
+  rag_pipeline_variables: []

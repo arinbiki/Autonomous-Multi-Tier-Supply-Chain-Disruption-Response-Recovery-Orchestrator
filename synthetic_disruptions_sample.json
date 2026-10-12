@@ -1,0 +1,1562 @@
+[
+  {
+    "record_id": "DISRUPT-2026-00001",
+    "uuid": "b618464e-7485-478d-8e6a-f7f973442e15",
+    "timestamp": "2026-10-06T18:47:03Z",
+    "disruption_report": "Ultra-large container vessel grounded at kilometer mark 109 in Port of Rotterdam. Transit convoys halted in both northbound and southbound directions. Approximately 132 merchant vessels queued at anchorage. Time-sensitive cargo including aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls facing re-routing delays of +12 to +16 sailing days around Cape of Good Hope. Clearance estimated at 14.5 days.",
+    "disruption_source": "manual",
+    "affected_region": "Rotterdam / Western Europe (NL)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Port of Rotterdam",
+      "country_code": "NL",
+      "coordinates": {
+        "lat": 51.897800000000004,
+        "lon": 4.4515
+      },
+      "estimated_duration_days": 14.5,
+      "daily_loss_usd_millions": 76.55,
+      "total_projected_loss_usd_millions": 1109.97,
+      "target_commodity": "aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls",
+      "impacted_sectors": [
+        "semiconductor",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Intel",
+        "Tesla"
+      ],
+      "confidence_score": 0.971
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00002",
+    "uuid": "1afe3e0a-77a2-4d45-9807-41eb3f3ff8d8",
+    "timestamp": "2026-10-10T09:06:10Z",
+    "disruption_report": "Heightened military drone/missile threat near Port of Singapore forced top 5 container liner alliances to pause transits. Over 367 container ships diverting. Key industrial supply lines of high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards experiencing severe ETA divergence (+17.2 days).",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Singapore / Southeast Asia (SG)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Port of Singapore",
+      "country_code": "SG",
+      "coordinates": {
+        "lat": 1.2670000000000001,
+        "lon": 103.821
+      },
+      "estimated_duration_days": 17.2,
+      "daily_loss_usd_millions": 49.08,
+      "total_projected_loss_usd_millions": 844.18,
+      "target_commodity": "high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards",
+      "impacted_sectors": [
+        "aerospace",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Rolls-Royce Aerospace",
+        "Novartis"
+      ],
+      "confidence_score": 0.931
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00003",
+    "uuid": "95d1c570-408e-4df7-af1d-e7ae11e3434d",
+    "timestamp": "2026-09-29T18:17:06Z",
+    "disruption_report": "Ultra-large container vessel grounded at kilometer mark 79 in Morowali Industrial Park (Nickel). Transit convoys halted in both northbound and southbound directions. Approximately 101 merchant vessels queued at anchorage. Time-sensitive cargo including battery-grade lithium hydroxide crystals and synthetic graphite anodes facing re-routing delays of +12 to +16 sailing days around Cape of Good Hope. Clearance estimated at 24.6 days.",
+    "disruption_source": "manual",
+    "affected_region": "Central Sulawesi / Southeast Asia (ID)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Morowali Industrial Park (Nickel)",
+      "country_code": "ID",
+      "coordinates": {
+        "lat": -2.7952999999999997,
+        "lon": 122.14280000000001
+      },
+      "estimated_duration_days": 24.6,
+      "daily_loss_usd_millions": 36.44,
+      "total_projected_loss_usd_millions": 896.42,
+      "target_commodity": "battery-grade lithium hydroxide crystals and synthetic graphite anodes",
+      "impacted_sectors": [
+        "biopharma",
+        "automotive",
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Novartis",
+        "Toyota",
+        "Vestas"
+      ],
+      "confidence_score": 0.957
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00004",
+    "uuid": "e2d1733b-b91d-4e10-8b99-1b0cdfc6e52d",
+    "timestamp": "2026-09-30T08:37:24Z",
+    "disruption_report": "Class I freight railroad network nationwide labor lockout took effect midnight across Busan / East Asia (KR). Intermodal container rail terminals closed, halting double-stack container traffic connecting inland dry ports. Over 43,009 freight railcars immobilized. Shippers of battery-grade lithium hydroxide crystals and synthetic graphite anodes frantically booking spot long-haul drayage trucks at 300% rate premiums. Disruption projected for 12.4 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Busan / East Asia (KR)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "intermodal_rail_lockout",
+      "primary_entity": "Port of Busan",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 35.1454,
+        "lon": 129.0776
+      },
+      "estimated_duration_days": 12.4,
+      "daily_loss_usd_millions": 31.16,
+      "total_projected_loss_usd_millions": 386.38,
+      "target_commodity": "battery-grade lithium hydroxide crystals and synthetic graphite anodes",
+      "impacted_sectors": [
+        "biopharma",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "AstraZeneca",
+        "Volkswagen Group"
+      ],
+      "confidence_score": 0.931
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00005",
+    "uuid": "994df645-8d6e-486a-899d-53aafc72b40c",
+    "timestamp": "2026-10-10T03:27:19Z",
+    "disruption_report": "Severe ground crew labor strike and automated baggage/cargo sorting equipment breakdown paralyzed air freight handling at Port of Los Angeles & Long Beach International Cargo Hub. Apron parking fully saturated with 56 wide-body freighters. Temperature-sensitive cold-chain shipments of sterile surgical catheters and endoscopic imaging sensor arrays facing critical spoilage risks. Backlog clearing window: 8.1 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Southern California (US)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "air_cargo_hub_congestion",
+      "primary_entity": "Port of Los Angeles & Long Beach",
+      "country_code": "US",
+      "coordinates": {
+        "lat": 33.7028,
+        "lon": -118.2725
+      },
+      "estimated_duration_days": 8.1,
+      "daily_loss_usd_millions": 12.57,
+      "total_projected_loss_usd_millions": 101.82,
+      "target_commodity": "sterile surgical catheters and endoscopic imaging sensor arrays",
+      "impacted_sectors": [
+        "semiconductor",
+        "clean_energy",
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Intel",
+        "CATL",
+        "Boeing"
+      ],
+      "confidence_score": 0.954
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00006",
+    "uuid": "8435f823-43c0-49a2-b0ad-9b0b1df54b97",
+    "timestamp": "2026-10-02T10:56:54Z",
+    "disruption_report": "Widespread wildcat strike across Dresden / Central Europe (DE) lithium extraction salars and brine processing centers halted chemical export convoys. Contractual deliveries of battery-grade battery-grade lithium carbonate suspended under force majeure notices for 58.4 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Dresden / Central Europe (DE)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "critical_minerals_restriction",
+      "primary_entity": "Silicon Saxony Fab Cluster",
+      "country_code": "DE",
+      "coordinates": {
+        "lat": 51.051399999999994,
+        "lon": 13.7078
+      },
+      "estimated_duration_days": 58.4,
+      "daily_loss_usd_millions": 52.16,
+      "total_projected_loss_usd_millions": 3046.14,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "semiconductor",
+        "automotive",
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "ASML",
+        "Tesla",
+        "CATL"
+      ],
+      "confidence_score": 0.949
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00007",
+    "uuid": "2ef2465d-4c70-4529-94a0-ca4454eca448",
+    "timestamp": "2026-09-28T17:46:35Z",
+    "disruption_report": "Severe ground crew labor strike and automated baggage/cargo sorting equipment breakdown paralyzed air freight handling at Port of Ningbo-Zhoushan International Cargo Hub. Apron parking fully saturated with 64 wide-body freighters. Temperature-sensitive cold-chain shipments of specialty fluorinated polyimide polymers and semiconductor etching gases facing critical spoilage risks. Backlog clearing window: 5.3 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Ningbo / East Asia (CN)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "air_cargo_hub_congestion",
+      "primary_entity": "Port of Ningbo-Zhoushan",
+      "country_code": "CN",
+      "coordinates": {
+        "lat": 29.854,
+        "lon": 121.5283
+      },
+      "estimated_duration_days": 5.3,
+      "daily_loss_usd_millions": 23.26,
+      "total_projected_loss_usd_millions": 123.28,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy"
+      ],
+      "confidence_score": 0.947
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00008",
+    "uuid": "2a88efab-61e2-4483-8a6f-799662a68754",
+    "timestamp": "2026-10-10T08:24:29Z",
+    "disruption_report": "Ultra-large container vessel grounded at kilometer mark 66 in Tainan Science Park Fab Cluster. Transit convoys halted in both northbound and southbound directions. Approximately 194 merchant vessels queued at anchorage. Time-sensitive cargo including sterile surgical catheters and endoscopic imaging sensor arrays facing re-routing delays of +12 to +16 sailing days around Cape of Good Hope. Clearance estimated at 11.0 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Tainan / Taiwan (TW)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Tainan Science Park Fab Cluster",
+      "country_code": "TW",
+      "coordinates": {
+        "lat": 23.1179,
+        "lon": 120.2742
+      },
+      "estimated_duration_days": 11.0,
+      "daily_loss_usd_millions": 94.95,
+      "total_projected_loss_usd_millions": 1044.45,
+      "target_commodity": "sterile surgical catheters and endoscopic imaging sensor arrays",
+      "impacted_sectors": [
+        "biopharma",
+        "automotive",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Roche",
+        "Toyota",
+        "ASML"
+      ],
+      "confidence_score": 0.97
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00009",
+    "uuid": "4c2822a2-a333-4201-805a-f7a085ce6167",
+    "timestamp": "2026-10-01T03:41:41Z",
+    "disruption_report": "Dockworkers union wildcat strike commenced at Port of Antwerp-Bruges Terminal Berth 12. Gantry cranes and container berths 2-5 shut down, stranding 190,984 TEU container cargo. Critical shipments of specialty fluorinated polyimide polymers and semiconductor etching gases facing severe inland delivery halt. Port authority estimates backlog clearance will require 15.5 days once picket lines dissolve.",
+    "disruption_source": "email",
+    "affected_region": "Antwerp / Western Europe (BE)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Port of Antwerp-Bruges",
+      "country_code": "BE",
+      "coordinates": {
+        "lat": 51.2466,
+        "lon": 4.3431
+      },
+      "estimated_duration_days": 15.5,
+      "daily_loss_usd_millions": 42.7,
+      "total_projected_loss_usd_millions": 661.85,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Boeing"
+      ],
+      "confidence_score": 0.962
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00010",
+    "uuid": "9f2f3ef4-a068-4d1d-b8cd-1402af1cdbe2",
+    "timestamp": "2026-10-12T12:01:03Z",
+    "disruption_report": "Customs and Border Protection agency issued Withhold Release Orders (WRO) targeting maritime shipments originating from Panama Canal / Central America (PA). Cargo manifests containing advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules flagged for mandatory traceability audit and physical container impoundment at bonded terminals. Clearances delayed by 23.7 days pending supply chain tier-3 origin proofs.",
+    "disruption_source": "email",
+    "affected_region": "Panama Canal / Central America (PA)",
+    "urgency_hint": "LOW",
+    "metadata": {
+      "archetype": "customs_sanctions_detention",
+      "primary_entity": "Panama Canal (Miraflores Locks)",
+      "country_code": "PA",
+      "coordinates": {
+        "lat": 9.029,
+        "lon": -79.56580000000001
+      },
+      "estimated_duration_days": 23.7,
+      "daily_loss_usd_millions": 21.97,
+      "total_projected_loss_usd_millions": 520.69,
+      "target_commodity": "advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules",
+      "impacted_sectors": [
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Airbus"
+      ],
+      "confidence_score": 0.922
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00011",
+    "uuid": "da79b7d3-4fc4-41da-867d-7c9b861d65fc",
+    "timestamp": "2026-10-04T09:42:06Z",
+    "disruption_report": "Widespread wildcat strike across Central Sulawesi / Southeast Asia (ID) lithium extraction salars and brine processing centers halted chemical export convoys. Contractual deliveries of battery-grade gallium/germanium concentrates suspended under force majeure notices for 23.4 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Central Sulawesi / Southeast Asia (ID)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "critical_minerals_restriction",
+      "primary_entity": "Morowali Industrial Park (Nickel)",
+      "country_code": "ID",
+      "coordinates": {
+        "lat": -2.7754999999999996,
+        "lon": 122.1691
+      },
+      "estimated_duration_days": 23.4,
+      "daily_loss_usd_millions": 40.37,
+      "total_projected_loss_usd_millions": 944.66,
+      "target_commodity": "sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API)",
+      "impacted_sectors": [
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "ASML"
+      ],
+      "confidence_score": 0.922
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00012",
+    "uuid": "40f305b6-4a33-47f7-8f68-dcf6f6d97e64",
+    "timestamp": "2026-09-29T07:34:29Z",
+    "disruption_report": "Labor negotiation deadlock triggered work stoppage across Bab-el-Mandeb Strait container facilities. Berths 2-5 operating at 0% crane productivity. Over 127,714 TEUs of specialty fluorinated polyimide polymers and semiconductor etching gases backlogged on incoming feeder vessels. Estimated operational paralysis: 9.5 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Red Sea / Horn of Africa (YE/DJ)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Bab-el-Mandeb Strait",
+      "country_code": "YE",
+      "coordinates": {
+        "lat": 12.6159,
+        "lon": 43.3022
+      },
+      "estimated_duration_days": 9.5,
+      "daily_loss_usd_millions": 16.59,
+      "total_projected_loss_usd_millions": 157.6,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "automotive",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Stellantis",
+        "ASML"
+      ],
+      "confidence_score": 0.975
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00013",
+    "uuid": "e8b63ea0-cc9a-4cae-b5d1-6c6d557015eb",
+    "timestamp": "2026-10-07T04:51:36Z",
+    "disruption_report": "Customs and Border Protection agency issued Withhold Release Orders (WRO) targeting maritime shipments originating from Red Sea / Horn of Africa (YE/DJ). Cargo manifests containing aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls flagged for mandatory traceability audit and physical container impoundment at bonded terminals. Clearances delayed by 16.7 days pending supply chain tier-3 origin proofs.",
+    "disruption_source": "webhook",
+    "affected_region": "Red Sea / Horn of Africa (YE/DJ)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "customs_sanctions_detention",
+      "primary_entity": "Bab-el-Mandeb Strait",
+      "country_code": "YE",
+      "coordinates": {
+        "lat": 12.5685,
+        "lon": 43.3377
+      },
+      "estimated_duration_days": 16.7,
+      "daily_loss_usd_millions": 16.22,
+      "total_projected_loss_usd_millions": 270.87,
+      "target_commodity": "aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls",
+      "impacted_sectors": [
+        "aerospace",
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Safran",
+        "CATL"
+      ],
+      "confidence_score": 0.93
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00014",
+    "uuid": "e31bdcbd-315e-4acf-959c-9df8ac403d9f",
+    "timestamp": "2026-09-29T15:46:23Z",
+    "disruption_report": "Distributed Denial-of-Service and customs EDI messaging infrastructure outage at Port of Rotterdam froze all commercial cargo clearance manifests. Over 101,678 TEUs held in bond. Estimated system restoration time: 10.6 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Rotterdam / Western Europe (NL)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "terminal_cyberattack",
+      "primary_entity": "Port of Rotterdam",
+      "country_code": "NL",
+      "coordinates": {
+        "lat": 51.900400000000005,
+        "lon": 4.4510000000000005
+      },
+      "estimated_duration_days": 10.6,
+      "daily_loss_usd_millions": 47.85,
+      "total_projected_loss_usd_millions": 507.21,
+      "target_commodity": "sterile surgical catheters and endoscopic imaging sensor arrays",
+      "impacted_sectors": [
+        "biopharma",
+        "automotive",
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Roche",
+        "Stellantis",
+        "Airbus"
+      ],
+      "confidence_score": 0.973
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00015",
+    "uuid": "a664c496-ebac-49c2-99b0-31ed3c27068e",
+    "timestamp": "2026-10-01T10:34:08Z",
+    "disruption_report": "Catastrophic flash flooding inundated the primary clean manufacturing facility of key subcomponent supplier Sumitomo Electric in Chicago / Midwest (US). Critical surface-mount technology (SMT) assembly lines and robotic tooling submerged. Exclusive single-source component for high-voltage automotive wiring harnesses and sensor fuse assemblies halted for 27.7 days.",
+    "disruption_source": "manual",
+    "affected_region": "Chicago / Midwest (US)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "tier_subcomponent_factory_incident",
+      "primary_entity": "Chicago BNSF/UP Intermodal Gateway",
+      "country_code": "US",
+      "coordinates": {
+        "lat": 41.9086,
+        "lon": -87.61240000000001
+      },
+      "estimated_duration_days": 27.7,
+      "daily_loss_usd_millions": 47.81,
+      "total_projected_loss_usd_millions": 1324.34,
+      "target_commodity": "high-voltage automotive wiring harnesses and sensor fuse assemblies",
+      "impacted_sectors": [
+        "clean_energy",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy",
+        "Intel"
+      ],
+      "confidence_score": 0.967
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00016",
+    "uuid": "2660ee60-cb44-4cf4-8d54-905cabefb009",
+    "timestamp": "2026-10-06T19:18:46Z",
+    "disruption_report": "Distributed Denial-of-Service and customs EDI messaging infrastructure outage at Samsung Giheung/Hwaseong Complex froze all commercial cargo clearance manifests. Over 80,889 TEUs held in bond. Estimated system restoration time: 4.6 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Gyeonggi / South Korea (KR)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "terminal_cyberattack",
+      "primary_entity": "Samsung Giheung/Hwaseong Complex",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 37.2452,
+        "lon": 127.104
+      },
+      "estimated_duration_days": 4.6,
+      "daily_loss_usd_millions": 38.75,
+      "total_projected_loss_usd_millions": 178.25,
+      "target_commodity": "high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards",
+      "impacted_sectors": [
+        "automotive",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Stellantis",
+        "Roche"
+      ],
+      "confidence_score": 0.932
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00017",
+    "uuid": "df6dc4b6-130d-4f60-bb5c-7dbd6ae467d9",
+    "timestamp": "2026-10-06T01:28:46Z",
+    "disruption_report": "Volcanic ash cloud / hazardous weather shut down primary airspace corridors over Samsung Giheung/Hwaseong Complex, diverting international freighters. Air freight spot rates spiked +180%. Critical air deliveries of sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API) delayed by 5.1 days.",
+    "disruption_source": "manual",
+    "affected_region": "Gyeonggi / South Korea (KR)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "air_cargo_hub_congestion",
+      "primary_entity": "Samsung Giheung/Hwaseong Complex",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 37.2605,
+        "lon": 127.07839999999999
+      },
+      "estimated_duration_days": 5.1,
+      "daily_loss_usd_millions": 21.7,
+      "total_projected_loss_usd_millions": 110.67,
+      "target_commodity": "sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API)",
+      "impacted_sectors": [
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "AstraZeneca"
+      ],
+      "confidence_score": 0.966
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00018",
+    "uuid": "b6abbe98-6546-4448-aa5c-401cda742d79",
+    "timestamp": "2026-10-12T14:00:34Z",
+    "disruption_report": "Catastrophic flash flooding inundated the primary clean manufacturing facility of key subcomponent supplier Shin-Etsu Chemical in Malacca / Southeast Asia (MY/ID). Critical surface-mount technology (SMT) assembly lines and robotic tooling submerged. Exclusive single-source component for Class-8 commercial heavy truck chassis engines and transmission gears halted for 43.2 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Malacca / Southeast Asia (MY/ID)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "tier_subcomponent_factory_incident",
+      "primary_entity": "Strait of Malacca",
+      "country_code": "MY",
+      "coordinates": {
+        "lat": 2.2182,
+        "lon": 102.126
+      },
+      "estimated_duration_days": 43.2,
+      "daily_loss_usd_millions": 27.83,
+      "total_projected_loss_usd_millions": 1202.26,
+      "target_commodity": "Class-8 commercial heavy truck chassis engines and transmission gears",
+      "impacted_sectors": [
+        "clean_energy",
+        "semiconductor",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy",
+        "TSMC",
+        "AstraZeneca"
+      ],
+      "confidence_score": 0.936
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00019",
+    "uuid": "51800d87-809d-45e4-a48a-7c1152257c7b",
+    "timestamp": "2026-10-03T12:35:13Z",
+    "disruption_report": "Emergency trade sanctions and dual-use technology export control regulations enacted without grace period. Port customs agents seized export containers of high-voltage automotive wiring harnesses and sensor fuse assemblies at Panama Canal (Miraflores Locks). Legal review and cargo detention estimated at 18.3 days.",
+    "disruption_source": "email",
+    "affected_region": "Panama Canal / Central America (PA)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "customs_sanctions_detention",
+      "primary_entity": "Panama Canal (Miraflores Locks)",
+      "country_code": "PA",
+      "coordinates": {
+        "lat": 9.0006,
+        "lon": -79.5436
+      },
+      "estimated_duration_days": 18.3,
+      "daily_loss_usd_millions": 21.17,
+      "total_projected_loss_usd_millions": 387.41,
+      "target_commodity": "high-voltage automotive wiring harnesses and sensor fuse assemblies",
+      "impacted_sectors": [
+        "semiconductor",
+        "automotive",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "NVIDIA",
+        "Tesla",
+        "Novartis"
+      ],
+      "confidence_score": 0.967
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00020",
+    "uuid": "84d78618-77cb-4774-86f0-f8e651024696",
+    "timestamp": "2026-10-12T02:29:07Z",
+    "disruption_report": "Historic drought reduced water levels in Suez Canal (Great Bitter Lake) down to 34.8 feet, triggering strict maximum draft restrictions and a 43% transit transit quota reduction. Over 216 bulk carriers and container ships stranded awaiting transit slots. Estimated seasonal disruption: 17.0 days affecting advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Suez / Middle East (EG)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "extreme_meteorological",
+      "primary_entity": "Suez Canal (Great Bitter Lake)",
+      "country_code": "EG",
+      "coordinates": {
+        "lat": 30.4013,
+        "lon": 32.342
+      },
+      "estimated_duration_days": 17.0,
+      "daily_loss_usd_millions": 23.55,
+      "total_projected_loss_usd_millions": 400.35,
+      "target_commodity": "advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules",
+      "impacted_sectors": [
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Vestas"
+      ],
+      "confidence_score": 0.949
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00021",
+    "uuid": "1a073a5e-bec2-4eda-a016-f0aee079cd37",
+    "timestamp": "2026-10-09T00:19:13Z",
+    "disruption_report": "Distributed Denial-of-Service and customs EDI messaging infrastructure outage at Bab-el-Mandeb Strait froze all commercial cargo clearance manifests. Over 55,179 TEUs held in bond. Estimated system restoration time: 7.8 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Red Sea / Horn of Africa (YE/DJ)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "terminal_cyberattack",
+      "primary_entity": "Bab-el-Mandeb Strait",
+      "country_code": "YE",
+      "coordinates": {
+        "lat": 12.6098,
+        "lon": 43.314
+      },
+      "estimated_duration_days": 7.8,
+      "daily_loss_usd_millions": 40.42,
+      "total_projected_loss_usd_millions": 315.28,
+      "target_commodity": "Class-8 commercial heavy truck chassis engines and transmission gears",
+      "impacted_sectors": [
+        "automotive",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Toyota",
+        "Roche"
+      ],
+      "confidence_score": 0.98
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00022",
+    "uuid": "b8d14c17-db98-4894-a302-cb33406456f0",
+    "timestamp": "2026-09-30T04:29:13Z",
+    "disruption_report": "Ministry of Mining announced sudden emergency export quotas and customs licensing holds on raw and refined cobalt hydroxide precipitate from Antofagasta / South America (CL). Smelter processing facilities halted cross-border freight dispatches. Battery cell manufacturing and EV powertrain assembly plants facing raw material starvation within 57.6 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Antofagasta / South America (CL)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "critical_minerals_restriction",
+      "primary_entity": "Atacama Lithium Salar Corridor",
+      "country_code": "CL",
+      "coordinates": {
+        "lat": -23.8849,
+        "lon": -68.2679
+      },
+      "estimated_duration_days": 57.6,
+      "daily_loss_usd_millions": 18.42,
+      "total_projected_loss_usd_millions": 1060.99,
+      "target_commodity": "ASML extreme ultraviolet (EUV) optical mirrors and precision laser sub-assemblies",
+      "impacted_sectors": [
+        "clean_energy",
+        "aerospace",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy",
+        "Rolls-Royce Aerospace",
+        "Tesla"
+      ],
+      "confidence_score": 0.925
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00023",
+    "uuid": "16fedf2a-cafa-4faa-9d6e-f051d9d2c5d1",
+    "timestamp": "2026-10-08T01:51:48Z",
+    "disruption_report": "Heightened military drone/missile threat near Atacama Lithium Salar Corridor forced top 5 container liner alliances to pause transits. Over 269 container ships diverting. Key industrial supply lines of battery-grade lithium hydroxide crystals and synthetic graphite anodes experiencing severe ETA divergence (+14.3 days).",
+    "disruption_source": "manual",
+    "affected_region": "Antofagasta / South America (CL)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Atacama Lithium Salar Corridor",
+      "country_code": "CL",
+      "coordinates": {
+        "lat": -23.8816,
+        "lon": -68.2321
+      },
+      "estimated_duration_days": 14.3,
+      "daily_loss_usd_millions": 58.89,
+      "total_projected_loss_usd_millions": 842.13,
+      "target_commodity": "battery-grade lithium hydroxide crystals and synthetic graphite anodes",
+      "impacted_sectors": [
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Samsung Electronics"
+      ],
+      "confidence_score": 0.937
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00024",
+    "uuid": "efcc9d89-8a89-406c-86f6-684cfdbe79fb",
+    "timestamp": "2026-10-09T22:59:00Z",
+    "disruption_report": "Dockworkers union wildcat strike commenced at Port of Santos Terminal 3. Gantry cranes and container berths 2-9 shut down, stranding 114,648 TEU container cargo. Critical shipments of Class-8 commercial heavy truck chassis engines and transmission gears facing severe inland delivery halt. Port authority estimates backlog clearance will require 21.0 days once picket lines dissolve.",
+    "disruption_source": "email",
+    "affected_region": "Santos / South America (BR)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Port of Santos",
+      "country_code": "BR",
+      "coordinates": {
+        "lat": -23.947400000000002,
+        "lon": -46.3535
+      },
+      "estimated_duration_days": 21.0,
+      "daily_loss_usd_millions": 26.43,
+      "total_projected_loss_usd_millions": 555.03,
+      "target_commodity": "Class-8 commercial heavy truck chassis engines and transmission gears",
+      "impacted_sectors": [
+        "aerospace",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Airbus",
+        "TSMC"
+      ],
+      "confidence_score": 0.916
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00025",
+    "uuid": "7bf230a6-f305-40be-b4b3-8e7d984b9272",
+    "timestamp": "2026-10-10T21:42:56Z",
+    "disruption_report": "Industrial chemical pipeline rupture at Port of Los Angeles & Long Beach halted EUV wafer processing modules. Critical fab equipment requiring recalibration and sterile purge. Estimated delivery shortfall for automotive/AI sterile surgical catheters and endoscopic imaging sensor arrays spanning 17.2 days.",
+    "disruption_source": "email",
+    "affected_region": "Southern California (US)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "semiconductor_fab_outage",
+      "primary_entity": "Port of Los Angeles & Long Beach",
+      "country_code": "US",
+      "coordinates": {
+        "lat": 33.7727,
+        "lon": -118.3129
+      },
+      "estimated_duration_days": 17.2,
+      "daily_loss_usd_millions": 89.02,
+      "total_projected_loss_usd_millions": 1531.14,
+      "target_commodity": "sterile surgical catheters and endoscopic imaging sensor arrays",
+      "impacted_sectors": [
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Tesla"
+      ],
+      "confidence_score": 0.923
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00026",
+    "uuid": "c71fce46-bf08-43a6-a402-20d6ff3f690f",
+    "timestamp": "2026-10-05T17:18:58Z",
+    "disruption_report": "Widespread wildcat strike across Central Sulawesi / Southeast Asia (ID) lithium extraction salars and brine processing centers halted chemical export convoys. Contractual deliveries of battery-grade battery-grade lithium carbonate suspended under force majeure notices for 34.2 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Central Sulawesi / Southeast Asia (ID)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "critical_minerals_restriction",
+      "primary_entity": "Morowali Industrial Park (Nickel)",
+      "country_code": "ID",
+      "coordinates": {
+        "lat": -2.7702999999999998,
+        "lon": 122.1436
+      },
+      "estimated_duration_days": 34.2,
+      "daily_loss_usd_millions": 33.75,
+      "total_projected_loss_usd_millions": 1154.25,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "clean_energy",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Vestas",
+        "Novartis"
+      ],
+      "confidence_score": 0.975
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00027",
+    "uuid": "b72edd71-b1c3-4fe0-b1aa-d425ff068912",
+    "timestamp": "2026-10-02T19:33:50Z",
+    "disruption_report": "Heightened military drone/missile threat near Samsung Giheung/Hwaseong Complex forced top 5 container liner alliances to pause transits. Over 290 container ships diverting. Key industrial supply lines of high-voltage automotive wiring harnesses and sensor fuse assemblies experiencing severe ETA divergence (+16.7 days).",
+    "disruption_source": "webhook",
+    "affected_region": "Gyeonggi / South Korea (KR)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Samsung Giheung/Hwaseong Complex",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 37.206199999999995,
+        "lon": 127.09559999999999
+      },
+      "estimated_duration_days": 16.7,
+      "daily_loss_usd_millions": 71.91,
+      "total_projected_loss_usd_millions": 1200.9,
+      "target_commodity": "high-voltage automotive wiring harnesses and sensor fuse assemblies",
+      "impacted_sectors": [
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "BMW"
+      ],
+      "confidence_score": 0.96
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00028",
+    "uuid": "7e4b512e-fd0a-4f85-bb27-71b3b6f17b6f",
+    "timestamp": "2026-09-29T09:30:01Z",
+    "disruption_report": "Dockworkers union wildcat strike commenced at Port of Hamburg Terminal 2. Gantry cranes and container berths 2-6 shut down, stranding 116,461 TEU container cargo. Critical shipments of aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls facing severe inland delivery halt. Port authority estimates backlog clearance will require 9.2 days once picket lines dissolve.",
+    "disruption_source": "webhook",
+    "affected_region": "Hamburg / Northern Europe (DE)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Port of Hamburg",
+      "country_code": "DE",
+      "coordinates": {
+        "lat": 53.5351,
+        "lon": 9.958400000000001
+      },
+      "estimated_duration_days": 9.2,
+      "daily_loss_usd_millions": 22.37,
+      "total_projected_loss_usd_millions": 205.8,
+      "target_commodity": "aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls",
+      "impacted_sectors": [
+        "aerospace",
+        "biopharma",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Safran",
+        "Novartis",
+        "Stellantis"
+      ],
+      "confidence_score": 0.984
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00029",
+    "uuid": "6772742d-2d09-4cff-9016-41cacec75338",
+    "timestamp": "2026-10-06T00:31:06Z",
+    "disruption_report": "Volcanic ash cloud / hazardous weather shut down primary airspace corridors over Port of Ningbo-Zhoushan, diverting international freighters. Air freight spot rates spiked +180%. Critical air deliveries of advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules delayed by 7.4 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Ningbo / East Asia (CN)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "air_cargo_hub_congestion",
+      "primary_entity": "Port of Ningbo-Zhoushan",
+      "country_code": "CN",
+      "coordinates": {
+        "lat": 29.9145,
+        "lon": 121.5805
+      },
+      "estimated_duration_days": 7.4,
+      "daily_loss_usd_millions": 24.8,
+      "total_projected_loss_usd_millions": 183.52,
+      "target_commodity": "advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules",
+      "impacted_sectors": [
+        "automotive",
+        "biopharma",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Stellantis",
+        "Pfizer",
+        "NVIDIA"
+      ],
+      "confidence_score": 0.975
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00030",
+    "uuid": "d30b7c69-6fd4-4eb7-994b-0c180788c1d9",
+    "timestamp": "2026-09-30T16:53:39Z",
+    "disruption_report": "State-sponsored ransomware intrusion compromised Terminal Operating Systems (TOS) and automated optical character recognition gates at Frankfurt Airport CargoCity Terminal Berth 12. Inbound and outbound container drayage appointments suspended. Vessel discharging halted due to disabled automated yard crane sequencing. Recovery estimated at 13.6 days for battery-grade lithium hydroxide crystals and synthetic graphite anodes.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Frankfurt / Western Europe (DE)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "terminal_cyberattack",
+      "primary_entity": "Frankfurt Airport CargoCity",
+      "country_code": "DE",
+      "coordinates": {
+        "lat": 50.0672,
+        "lon": 8.5236
+      },
+      "estimated_duration_days": 13.6,
+      "daily_loss_usd_millions": 18.54,
+      "total_projected_loss_usd_millions": 252.14,
+      "target_commodity": "battery-grade lithium hydroxide crystals and synthetic graphite anodes",
+      "impacted_sectors": [
+        "clean_energy",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Vestas",
+        "AstraZeneca"
+      ],
+      "confidence_score": 0.915
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00031",
+    "uuid": "f839b677-44d8-4f27-a657-63d89c0dc4b8",
+    "timestamp": "2026-10-02T04:38:14Z",
+    "disruption_report": "Widespread wildcat strike across Busan / East Asia (KR) lithium extraction salars and brine processing centers halted chemical export convoys. Contractual deliveries of battery-grade class-1 nickel briquettes suspended under force majeure notices for 59.0 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Busan / East Asia (KR)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "critical_minerals_restriction",
+      "primary_entity": "Port of Busan",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 35.112,
+        "lon": 129.01409999999998
+      },
+      "estimated_duration_days": 59.0,
+      "daily_loss_usd_millions": 45.41,
+      "total_projected_loss_usd_millions": 2679.19,
+      "target_commodity": "advanced 3nm automotive microcontroller units (MCUs) and power MOSFET modules",
+      "impacted_sectors": [
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy"
+      ],
+      "confidence_score": 0.983
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00032",
+    "uuid": "29327616-f6cc-447d-b66f-d3464a871bae",
+    "timestamp": "2026-10-06T13:29:29Z",
+    "disruption_report": "Historic drought reduced water levels in Port of Busan down to 35.2 feet, triggering strict maximum draft restrictions and a 31% transit transit quota reduction. Over 128 bulk carriers and container ships stranded awaiting transit slots. Estimated seasonal disruption: 10.4 days affecting Class-8 commercial heavy truck chassis engines and transmission gears.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Busan / East Asia (KR)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "extreme_meteorological",
+      "primary_entity": "Port of Busan",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 35.0522,
+        "lon": 129.07299999999998
+      },
+      "estimated_duration_days": 10.4,
+      "daily_loss_usd_millions": 26.0,
+      "total_projected_loss_usd_millions": 270.4,
+      "target_commodity": "Class-8 commercial heavy truck chassis engines and transmission gears",
+      "impacted_sectors": [
+        "clean_energy",
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Vestas",
+        "Rolls-Royce Aerospace"
+      ],
+      "confidence_score": 0.942
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00033",
+    "uuid": "dfd75fc9-f259-4c7b-a3de-3f9eca7ea6cc",
+    "timestamp": "2026-09-30T16:04:46Z",
+    "disruption_report": "Labor negotiation deadlock triggered work stoppage across Katanga Copper-Cobalt Belt container facilities. Berths 2-9 operating at 0% crane productivity. Over 100,700 TEUs of ASML extreme ultraviolet (EUV) optical mirrors and precision laser sub-assemblies backlogged on incoming feeder vessels. Estimated operational paralysis: 21.2 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Kolwezi / Central Africa (CD)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Katanga Copper-Cobalt Belt",
+      "country_code": "CD",
+      "coordinates": {
+        "lat": -10.7468,
+        "lon": 25.4739
+      },
+      "estimated_duration_days": 21.2,
+      "daily_loss_usd_millions": 44.51,
+      "total_projected_loss_usd_millions": 943.61,
+      "target_commodity": "ASML extreme ultraviolet (EUV) optical mirrors and precision laser sub-assemblies",
+      "impacted_sectors": [
+        "aerospace",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Boeing",
+        "Novartis"
+      ],
+      "confidence_score": 0.988
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00034",
+    "uuid": "955ff411-fc15-463e-b5ae-616f10868be2",
+    "timestamp": "2026-10-08T17:35:24Z",
+    "disruption_report": "Volcanic ash cloud / hazardous weather shut down primary airspace corridors over Silicon Saxony Fab Cluster, diverting international freighters. Air freight spot rates spiked +180%. Critical air deliveries of aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls delayed by 3.8 days.",
+    "disruption_source": "manual",
+    "affected_region": "Dresden / Central Europe (DE)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "air_cargo_hub_congestion",
+      "primary_entity": "Silicon Saxony Fab Cluster",
+      "country_code": "DE",
+      "coordinates": {
+        "lat": 51.067299999999996,
+        "lon": 13.747200000000001
+      },
+      "estimated_duration_days": 3.8,
+      "daily_loss_usd_millions": 24.14,
+      "total_projected_loss_usd_millions": 91.73,
+      "target_commodity": "aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls",
+      "impacted_sectors": [
+        "clean_energy",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy",
+        "NVIDIA"
+      ],
+      "confidence_score": 0.957
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00035",
+    "uuid": "f2411f9a-d824-4aae-9caf-877930f956c9",
+    "timestamp": "2026-10-01T06:47:20Z",
+    "disruption_report": "Class I freight railroad network nationwide labor lockout took effect midnight across Shanghai / East Asia (CN). Intermodal container rail terminals closed, halting double-stack container traffic connecting inland dry ports. Over 37,804 freight railcars immobilized. Shippers of sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API) frantically booking spot long-haul drayage trucks at 300% rate premiums. Disruption projected for 5.4 days.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Shanghai / East Asia (CN)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "intermodal_rail_lockout",
+      "primary_entity": "Port of Shanghai (Yangshan)",
+      "country_code": "CN",
+      "coordinates": {
+        "lat": 30.668499999999998,
+        "lon": 122.0855
+      },
+      "estimated_duration_days": 5.4,
+      "daily_loss_usd_millions": 34.76,
+      "total_projected_loss_usd_millions": 187.7,
+      "target_commodity": "sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API)",
+      "impacted_sectors": [
+        "automotive",
+        "biopharma",
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Tesla",
+        "AstraZeneca",
+        "BYD"
+      ],
+      "confidence_score": 0.977
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00036",
+    "uuid": "f83e10d0-e1a4-46e3-b172-cf92f24d777e",
+    "timestamp": "2026-10-11T22:23:07Z",
+    "disruption_report": "Industrial explosion and structural fire destroyed the dedicated specialty polymer synthesizing unit at Murata Manufacturing plant in Hsinchu / Taiwan (TW). Automotive wiring harness and connector sub-assemblies for aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls face complete supply cut-off lasting 35.4 days.",
+    "disruption_source": "email",
+    "affected_region": "Hsinchu / Taiwan (TW)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "tier_subcomponent_factory_incident",
+      "primary_entity": "TSMC Science Park Fab Cluster",
+      "country_code": "TW",
+      "coordinates": {
+        "lat": 24.7544,
+        "lon": 120.95259999999999
+      },
+      "estimated_duration_days": 35.4,
+      "daily_loss_usd_millions": 23.52,
+      "total_projected_loss_usd_millions": 832.61,
+      "target_commodity": "aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls",
+      "impacted_sectors": [
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "NVIDIA"
+      ],
+      "confidence_score": 0.955
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00037",
+    "uuid": "0b3d9b56-2513-410b-9f3d-e95a5605a23f",
+    "timestamp": "2026-10-07T11:38:36Z",
+    "disruption_report": "Ultra-large container vessel grounded at kilometer mark 129 in Atacama Lithium Salar Corridor. Transit convoys halted in both northbound and southbound directions. Approximately 213 merchant vessels queued at anchorage. Time-sensitive cargo including sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API) facing re-routing delays of +12 to +16 sailing days around Cape of Good Hope. Clearance estimated at 26.3 days.",
+    "disruption_source": "manual",
+    "affected_region": "Antofagasta / South America (CL)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Atacama Lithium Salar Corridor",
+      "country_code": "CL",
+      "coordinates": {
+        "lat": -23.8986,
+        "lon": -68.2736
+      },
+      "estimated_duration_days": 26.3,
+      "daily_loss_usd_millions": 41.31,
+      "total_projected_loss_usd_millions": 1086.45,
+      "target_commodity": "sterile temperature-controlled mRNA vaccine vials and active pharmaceutical ingredients (API)",
+      "impacted_sectors": [
+        "semiconductor",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Intel",
+        "BMW"
+      ],
+      "confidence_score": 0.946
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00038",
+    "uuid": "fce69c5c-a939-4639-9950-d35391596eda",
+    "timestamp": "2026-10-10T01:54:56Z",
+    "disruption_report": "Major freight rail artery severed by catastrophic bridge derailment near Dresden / Central Europe (DE). Eastbound freight corridors paralyzed, halting movement of specialty fluorinated polyimide polymers and semiconductor etching gases. Detour routings adding +11.8 days dwell time.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Dresden / Central Europe (DE)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "intermodal_rail_lockout",
+      "primary_entity": "Silicon Saxony Fab Cluster",
+      "country_code": "DE",
+      "coordinates": {
+        "lat": 51.045399999999994,
+        "lon": 13.7405
+      },
+      "estimated_duration_days": 11.8,
+      "daily_loss_usd_millions": 16.2,
+      "total_projected_loss_usd_millions": 191.16,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "clean_energy",
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy",
+        "Rolls-Royce Aerospace"
+      ],
+      "confidence_score": 0.918
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00039",
+    "uuid": "ac5ee336-87dc-4b88-bc1c-a81459e0759e",
+    "timestamp": "2026-10-07T12:11:02Z",
+    "disruption_report": "Heightened military drone/missile threat near Chicago BNSF/UP Intermodal Gateway forced top 5 container liner alliances to pause transits. Over 245 container ships diverting. Key industrial supply lines of sterile surgical catheters and endoscopic imaging sensor arrays experiencing severe ETA divergence (+18.6 days).",
+    "disruption_source": "webhook",
+    "affected_region": "Chicago / Midwest (US)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Chicago BNSF/UP Intermodal Gateway",
+      "country_code": "US",
+      "coordinates": {
+        "lat": 41.887,
+        "lon": -87.6289
+      },
+      "estimated_duration_days": 18.6,
+      "daily_loss_usd_millions": 87.17,
+      "total_projected_loss_usd_millions": 1621.36,
+      "target_commodity": "sterile surgical catheters and endoscopic imaging sensor arrays",
+      "impacted_sectors": [
+        "aerospace",
+        "automotive",
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Airbus",
+        "BMW",
+        "Vestas"
+      ],
+      "confidence_score": 0.98
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00040",
+    "uuid": "a9989e49-d8f2-4696-81e5-ae494b770ba7",
+    "timestamp": "2026-10-05T03:25:46Z",
+    "disruption_report": "Distributed Denial-of-Service and customs EDI messaging infrastructure outage at Port of Antwerp-Bruges froze all commercial cargo clearance manifests. Over 92,910 TEUs held in bond. Estimated system restoration time: 6.9 days.",
+    "disruption_source": "email",
+    "affected_region": "Antwerp / Western Europe (BE)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "terminal_cyberattack",
+      "primary_entity": "Port of Antwerp-Bruges",
+      "country_code": "BE",
+      "coordinates": {
+        "lat": 51.2381,
+        "lon": 4.3443
+      },
+      "estimated_duration_days": 6.9,
+      "daily_loss_usd_millions": 34.81,
+      "total_projected_loss_usd_millions": 240.19,
+      "target_commodity": "aerospace titanium turbine alloy ingots and carbon fiber prepreg rolls",
+      "impacted_sectors": [
+        "aerospace",
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Rolls-Royce Aerospace",
+        "CATL"
+      ],
+      "confidence_score": 0.963
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00041",
+    "uuid": "696a613e-cca1-4ba6-ad36-02391d44b11d",
+    "timestamp": "2026-10-10T11:59:29Z",
+    "disruption_report": "Ultra-large container vessel grounded at kilometer mark 64 in Port of Ningbo-Zhoushan. Transit convoys halted in both northbound and southbound directions. Approximately 375 merchant vessels queued at anchorage. Time-sensitive cargo including ASML extreme ultraviolet (EUV) optical mirrors and precision laser sub-assemblies facing re-routing delays of +12 to +16 sailing days around Cape of Good Hope. Clearance estimated at 24.9 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Ningbo / East Asia (CN)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "strategic_chokepoint_blockage",
+      "primary_entity": "Port of Ningbo-Zhoushan",
+      "country_code": "CN",
+      "coordinates": {
+        "lat": 29.8745,
+        "lon": 121.5211
+      },
+      "estimated_duration_days": 24.9,
+      "daily_loss_usd_millions": 40.06,
+      "total_projected_loss_usd_millions": 997.49,
+      "target_commodity": "ASML extreme ultraviolet (EUV) optical mirrors and precision laser sub-assemblies",
+      "impacted_sectors": [
+        "biopharma",
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Novartis",
+        "Airbus"
+      ],
+      "confidence_score": 0.964
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00042",
+    "uuid": "7375cdae-d098-4453-bdc3-f5f91fe39a50",
+    "timestamp": "2026-10-05T05:46:36Z",
+    "disruption_report": "Catastrophic flash flooding inundated the primary clean manufacturing facility of key subcomponent supplier Murata Manufacturing in Gyeonggi / South Korea (KR). Critical surface-mount technology (SMT) assembly lines and robotic tooling submerged. Exclusive single-source component for sterile surgical catheters and endoscopic imaging sensor arrays halted for 15.4 days.",
+    "disruption_source": "email",
+    "affected_region": "Gyeonggi / South Korea (KR)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "tier_subcomponent_factory_incident",
+      "primary_entity": "Samsung Giheung/Hwaseong Complex",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 37.216,
+        "lon": 127.0278
+      },
+      "estimated_duration_days": 15.4,
+      "daily_loss_usd_millions": 32.95,
+      "total_projected_loss_usd_millions": 507.43,
+      "target_commodity": "sterile surgical catheters and endoscopic imaging sensor arrays",
+      "impacted_sectors": [
+        "aerospace",
+        "semiconductor",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Airbus",
+        "Intel",
+        "Volkswagen Group"
+      ],
+      "confidence_score": 0.935
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00043",
+    "uuid": "3db70ff9-770c-43e2-962b-f642e08ddbd9",
+    "timestamp": "2026-10-02T14:07:11Z",
+    "disruption_report": "Distributed Denial-of-Service and customs EDI messaging infrastructure outage at Katanga Copper-Cobalt Belt froze all commercial cargo clearance manifests. Over 77,240 TEUs held in bond. Estimated system restoration time: 6.2 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Kolwezi / Central Africa (CD)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "terminal_cyberattack",
+      "primary_entity": "Katanga Copper-Cobalt Belt",
+      "country_code": "CD",
+      "coordinates": {
+        "lat": -10.696700000000002,
+        "lon": 25.4731
+      },
+      "estimated_duration_days": 6.2,
+      "daily_loss_usd_millions": 28.58,
+      "total_projected_loss_usd_millions": 177.2,
+      "target_commodity": "high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards",
+      "impacted_sectors": [
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Samsung Electronics"
+      ],
+      "confidence_score": 0.926
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00044",
+    "uuid": "5401bc52-ad84-4e95-b5d9-dbb00ae58774",
+    "timestamp": "2026-10-06T23:48:27Z",
+    "disruption_report": "Class I freight railroad network nationwide labor lockout took effect midnight across Red Sea / Horn of Africa (YE/DJ). Intermodal container rail terminals closed, halting double-stack container traffic connecting inland dry ports. Over 67,799 freight railcars immobilized. Shippers of battery-grade lithium hydroxide crystals and synthetic graphite anodes frantically booking spot long-haul drayage trucks at 300% rate premiums. Disruption projected for 6.5 days.",
+    "disruption_source": "webhook",
+    "affected_region": "Red Sea / Horn of Africa (YE/DJ)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "intermodal_rail_lockout",
+      "primary_entity": "Bab-el-Mandeb Strait",
+      "country_code": "YE",
+      "coordinates": {
+        "lat": 12.5652,
+        "lon": 43.2874
+      },
+      "estimated_duration_days": 6.5,
+      "daily_loss_usd_millions": 17.17,
+      "total_projected_loss_usd_millions": 111.61,
+      "target_commodity": "battery-grade lithium hydroxide crystals and synthetic graphite anodes",
+      "impacted_sectors": [
+        "biopharma",
+        "aerospace"
+      ],
+      "tier1_customers_at_risk": [
+        "Roche",
+        "Airbus"
+      ],
+      "confidence_score": 0.947
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00045",
+    "uuid": "1d1ed20c-04f4-41c3-8066-f39621edfa5b",
+    "timestamp": "2026-10-05T18:12:34Z",
+    "disruption_report": "Labor negotiation deadlock triggered work stoppage across Port of Antwerp-Bruges container facilities. Berths 1-8 operating at 0% crane productivity. Over 184,856 TEUs of high-voltage automotive wiring harnesses and sensor fuse assemblies backlogged on incoming feeder vessels. Estimated operational paralysis: 8.3 days.",
+    "disruption_source": "email",
+    "affected_region": "Antwerp / Western Europe (BE)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Port of Antwerp-Bruges",
+      "country_code": "BE",
+      "coordinates": {
+        "lat": 51.256400000000006,
+        "lon": 4.4218
+      },
+      "estimated_duration_days": 8.3,
+      "daily_loss_usd_millions": 43.11,
+      "total_projected_loss_usd_millions": 357.81,
+      "target_commodity": "high-voltage automotive wiring harnesses and sensor fuse assemblies",
+      "impacted_sectors": [
+        "automotive",
+        "semiconductor",
+        "biopharma"
+      ],
+      "tier1_customers_at_risk": [
+        "Stellantis",
+        "Intel",
+        "Novartis"
+      ],
+      "confidence_score": 0.941
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00046",
+    "uuid": "aae699b7-d782-4e7d-8ff3-3942d6f2f872",
+    "timestamp": "2026-10-11T10:56:20Z",
+    "disruption_report": "Major freight rail artery severed by catastrophic bridge derailment near Frankfurt / Western Europe (DE). Eastbound freight corridors paralyzed, halting movement of specialty fluorinated polyimide polymers and semiconductor etching gases. Detour routings adding +16.8 days dwell time.",
+    "disruption_source": "webhook",
+    "affected_region": "Frankfurt / Western Europe (DE)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "intermodal_rail_lockout",
+      "primary_entity": "Frankfurt Airport CargoCity",
+      "country_code": "DE",
+      "coordinates": {
+        "lat": 50.0162,
+        "lon": 8.5563
+      },
+      "estimated_duration_days": 16.8,
+      "daily_loss_usd_millions": 28.12,
+      "total_projected_loss_usd_millions": 472.42,
+      "target_commodity": "specialty fluorinated polyimide polymers and semiconductor etching gases",
+      "impacted_sectors": [
+        "biopharma",
+        "aerospace",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Pfizer",
+        "Safran",
+        "Samsung Electronics"
+      ],
+      "confidence_score": 0.924
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00047",
+    "uuid": "e904fa56-3f12-4578-b220-1196a37b3720",
+    "timestamp": "2026-10-08T01:35:34Z",
+    "disruption_report": "Severe municipal power grid substation explosion caused catastrophic cleanroom vacuum collapse and automated ESD shutdown at Panama Canal (Miraflores Locks) Fab 20. In-line 300mm wafer lots across 5nm photolithography tooling contaminated. Fab output frozen for 19.5 days. Global inventory buffers for Class-8 commercial heavy truck chassis engines and transmission gears depleted within 72 hours.",
+    "disruption_source": "webhook",
+    "affected_region": "Panama Canal / Central America (PA)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "semiconductor_fab_outage",
+      "primary_entity": "Panama Canal (Miraflores Locks)",
+      "country_code": "PA",
+      "coordinates": {
+        "lat": 9.0304,
+        "lon": -79.62060000000001
+      },
+      "estimated_duration_days": 19.5,
+      "daily_loss_usd_millions": 56.51,
+      "total_projected_loss_usd_millions": 1101.94,
+      "target_commodity": "Class-8 commercial heavy truck chassis engines and transmission gears",
+      "impacted_sectors": [
+        "aerospace",
+        "biopharma",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Boeing",
+        "Roche",
+        "Intel"
+      ],
+      "confidence_score": 0.964
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00048",
+    "uuid": "6d139024-aabc-4c4e-8742-5bd3b8e43b40",
+    "timestamp": "2026-10-05T21:18:00Z",
+    "disruption_report": "Catastrophic flash flooding inundated the primary clean manufacturing facility of key subcomponent supplier Shin-Etsu Chemical in Tainan / Taiwan (TW). Critical surface-mount technology (SMT) assembly lines and robotic tooling submerged. Exclusive single-source component for Class-8 commercial heavy truck chassis engines and transmission gears halted for 38.1 days.",
+    "disruption_source": "email",
+    "affected_region": "Tainan / Taiwan (TW)",
+    "urgency_hint": "HIGH",
+    "metadata": {
+      "archetype": "tier_subcomponent_factory_incident",
+      "primary_entity": "Tainan Science Park Fab Cluster",
+      "country_code": "TW",
+      "coordinates": {
+        "lat": 23.153,
+        "lon": 120.2615
+      },
+      "estimated_duration_days": 38.1,
+      "daily_loss_usd_millions": 38.65,
+      "total_projected_loss_usd_millions": 1472.57,
+      "target_commodity": "Class-8 commercial heavy truck chassis engines and transmission gears",
+      "impacted_sectors": [
+        "automotive",
+        "biopharma",
+        "semiconductor"
+      ],
+      "tier1_customers_at_risk": [
+        "Toyota",
+        "AstraZeneca",
+        "NVIDIA"
+      ],
+      "confidence_score": 0.942
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00049",
+    "uuid": "c96ccb06-a69a-43c5-9924-7e203aa8883f",
+    "timestamp": "2026-10-10T17:54:19Z",
+    "disruption_report": "Major freight rail artery severed by catastrophic bridge derailment near Busan / East Asia (KR). Eastbound freight corridors paralyzed, halting movement of high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards. Detour routings adding +10.6 days dwell time.",
+    "disruption_source": "news_monitoring",
+    "affected_region": "Busan / East Asia (KR)",
+    "urgency_hint": "MEDIUM",
+    "metadata": {
+      "archetype": "intermodal_rail_lockout",
+      "primary_entity": "Port of Busan",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 35.0611,
+        "lon": 129.0188
+      },
+      "estimated_duration_days": 10.6,
+      "daily_loss_usd_millions": 10.79,
+      "total_projected_loss_usd_millions": 114.37,
+      "target_commodity": "high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards",
+      "impacted_sectors": [
+        "clean_energy"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy"
+      ],
+      "confidence_score": 0.934
+    }
+  },
+  {
+    "record_id": "DISRUPT-2026-00050",
+    "uuid": "c91894e5-30a1-481c-9146-64160de85c2d",
+    "timestamp": "2026-10-01T15:09:22Z",
+    "disruption_report": "Dockworkers union wildcat strike commenced at Port of Busan Terminal North Quay. Gantry cranes and container berths 2-6 shut down, stranding 111,355 TEU container cargo. Critical shipments of high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards facing severe inland delivery halt. Port authority estimates backlog clearance will require 8.1 days once picket lines dissolve.",
+    "disruption_source": "email",
+    "affected_region": "Busan / East Asia (KR)",
+    "urgency_hint": "CRITICAL",
+    "metadata": {
+      "archetype": "maritime_port_strike",
+      "primary_entity": "Port of Busan",
+      "country_code": "KR",
+      "coordinates": {
+        "lat": 35.1481,
+        "lon": 129.0154
+      },
+      "estimated_duration_days": 8.1,
+      "daily_loss_usd_millions": 42.12,
+      "total_projected_loss_usd_millions": 341.17,
+      "target_commodity": "high-bandwidth memory (HBM3e) wafer stacks and GPU substrate boards",
+      "impacted_sectors": [
+        "clean_energy",
+        "semiconductor",
+        "automotive"
+      ],
+      "tier1_customers_at_risk": [
+        "Siemens Energy",
+        "ASML",
+        "Stellantis"
+      ],
+      "confidence_score": 0.911
+    }
+  }
+]
